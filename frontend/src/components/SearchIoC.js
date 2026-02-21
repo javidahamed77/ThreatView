@@ -82,9 +82,9 @@ const SearchIoC = () => {
             borderRadius: '4px'
           }}>
             {results.found ? (
-              <p>✅ Found {results.results.length} match(es) for "{results.query}"</p>
+              <p>Found {results.results.length} match(es) for "{results.query}"</p>
             ) : (
-              <p>❌ No matches found for "{results.query}"</p>
+              <p>No matches found for "{results.query}"</p>
             )}
           </div>
 

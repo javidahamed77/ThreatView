@@ -23,11 +23,11 @@ const AlertsPanel = () => {
     }
   };
 
-  const getAlertIcon = (type) => {
+  const getAlertTypeText = (type) => {
     switch(type) {
-      case 'industry': return '🏥';
-      case 'brand': return '🏢';
-      default: return '📢';
+      case 'industry': return 'Industry Alert';
+      case 'brand': return 'Brand Alert';
+      default: return 'Alert';
     }
   };
 
@@ -49,8 +49,8 @@ const AlertsPanel = () => {
       borderRadius: '8px',
       boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
     }}>
-      <h3 style={{ marginBottom: '15px', display: 'flex', alignItems: 'center', gap: '5px' }}>
-        <span>🚨</span> Active Alerts ({alerts.length})
+      <h3 style={{ marginBottom: '15px' }}>
+        Active Alerts ({alerts.length})
       </h3>
       
       {alerts.length === 0 ? (
@@ -68,7 +68,7 @@ const AlertsPanel = () => {
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
                 <span style={{ fontWeight: 'bold' }}>
-                  {getAlertIcon(alert.type)} {alert.type === 'industry' ? 'Industry Alert' : 'Brand Alert'}
+                  {getAlertTypeText(alert.type)}
                 </span>
                 <span style={{ fontSize: '11px', color: '#666' }}>
                   {getTimeAgo(alert.created_at)}
