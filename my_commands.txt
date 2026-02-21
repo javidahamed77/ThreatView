@@ -1,0 +1,11 @@
+git --version
+cd threatview
+git init
+git add .
+git commit -m "Threatview project complete"
+git branch -M main
+git remote add origin https://github.com/javidahamed77/ThreatView.git
+git branch -
+git branch -M main
+git push -u origin main
+doskey /history > C:\Users\ilyas\threatview\my_commands.txt
